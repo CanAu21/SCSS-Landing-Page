@@ -1,0 +1,34 @@
+//Grid
+@mixin grid($column,$gap:0px) {
+    display: grid;
+    grid-gap: $gap;
+    grid-template-columns: repeat($column,1fr);
+}
+
+//Flex Box
+@mixin flex($justify,$align:center,$direction:row,$wrap:wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;    
+}
+
+//Media Screen
+@mixin small{
+    @media (min-width:#{$screen-sm-min}){
+        @content;
+    }
+}
+
+@mixin medium{
+    @media (min-width:#{$screen-md-min}){
+        @content;
+    }
+}
+
+@mixin large{
+    @media (min-width:#{$screen-lg-min}){
+        @content;
+    }
+}
